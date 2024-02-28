@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// TODO ファイルを分ける
 void main() {
   runApp(const MyApp());
 }
@@ -10,12 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Happy App',
+      title: 'Harry App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'はっぴー！'),
+      home: const MyHomePage(title: 'Harry App'),
     );
   }
 }
