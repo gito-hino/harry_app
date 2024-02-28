@@ -1,5 +1,6 @@
 // ホーム画面
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomeApp extends StatelessWidget {
   const HomeApp({super.key});
@@ -58,7 +59,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 80,
                   margin: const EdgeInsets.symmetric(horizontal: 10),
                   color: Colors.grey[500],
-                  child: const Icon(Icons.person),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: AspectRatio(
+                        // 正方形の比率を設定
+                        aspectRatio: 1.0,
+                        child: SvgPicture.asset(
+                            'assets/images/harry_potter_icon.svg',
+                            fit: BoxFit.cover
+                        )
+                    ),
+                  ),
                 ),
                 const SizedBox(width: 16),
                 Column(
