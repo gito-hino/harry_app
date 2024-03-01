@@ -6,7 +6,7 @@ class MyWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return const Text("ここにデータが追加される予定です。");
+    return const Text("Hello, Riverpod!");
   }
 }
 
