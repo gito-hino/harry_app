@@ -2,11 +2,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final hogwartsFamilyProvider = Provider<List<Map<String, String>>>((ref) {
   return [
-    {"name": "Harry Potter", "age": "11", "house": "Gryffindor"},
-    {"name": "Hermione Granger", "age": "11", "house": "Gryffindor"},
-    {"name": "Ron Weasley", "age": "11", "house": "Gryffindor"},
-    {"name": "Draco Malfoy", "age": "11", "house": "Slytherin"},
-    {"name": "Luna Lovegood", "age": "11", "house": "Ravenclaw"},
-    {"name": "Cedric Diggory", "age": "11", "house": "Hufflepuff"},
+    {"name": "ハリー・ポッター", "age": "11", "house": "グリフィンドール"},
+    {"name": "ハーマイオニー・グレンジャー", "age": "11", "house": "グリフィンドール"},
+    {"name": "ロン・ウィーズリー", "age": "11", "house": "グリフィンドール"},
+    {"name": "ドラコ・マルフォイ", "age": "11", "house": "スリザリン"},
+    {"name": "ルーナ・ラブグッド", "age": "11", "house": "レイブンクロー"},
+    {"name": "セドリック・ディゴリー", "age": "14", "house": "ハッフルパフ"},
   ];
 });

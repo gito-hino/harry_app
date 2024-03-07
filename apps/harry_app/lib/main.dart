@@ -10,6 +10,7 @@ void main() {
     // Riverpodを使うためにProviderScopeでラップ
     const ProviderScope(
       child: MaterialApp(
+        //デフォルトのホーム画面をHomeAppに設定
         home: HomeApp("ハリーポッター登場人物一覧"),
       ),
     )

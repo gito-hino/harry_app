@@ -15,7 +15,7 @@ class HomeApp extends ConsumerWidget {
     final hogwartsFamily = ref.watch(hogwartsFamilyProvider);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Colors.amberAccent[700],
         title: Text(title),
       ),
       body: ListView.builder(
@@ -61,7 +61,7 @@ class HomeApp extends ConsumerWidget {
                     const SizedBox(height: 8),
                     Text(
                       // 年齢
-                      "Age: ${hogwartsFamily[index]["age"]!}",
+                      "年齢: ${hogwartsFamily[index]["age"]!}歳",
                       style: const TextStyle(
                         color: Colors.black,
                         fontSize: 16,
@@ -70,7 +70,7 @@ class HomeApp extends ConsumerWidget {
                     const SizedBox(height: 8),
                     Text(
                       // 所属寮
-                      "House: ${hogwartsFamily[index]["house"]!}",
+                      "所属: ${hogwartsFamily[index]["house"]!}",
                       style: const TextStyle(
                         color: Colors.black,
                         fontSize: 16,
