@@ -6,7 +6,7 @@ final hogwartsFamilyProvider = Provider<List<Map<String, String>>>((ref) {
     {"name": "ハーマイオニー・グレンジャー", "age": "11", "house": "グリフィンドール"},
     {"name": "ロン・ウィーズリー", "age": "11", "house": "グリフィンドール"},
     {"name": "ドラコ・マルフォイ", "age": "11", "house": "スリザリン"},
-    {"name": "ルーナ・ラブグッド", "age": "11", "house": "レイブンクロー"},
+    {"name": "ルーナ・ラヴグッド", "age": "11", "house": "レイブンクロー"},
     {"name": "セドリック・ディゴリー", "age": "14", "house": "ハッフルパフ"},
   ];
 });
