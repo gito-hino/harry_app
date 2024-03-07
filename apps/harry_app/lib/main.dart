@@ -1,5 +1,3 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -7,7 +5,8 @@ import 'my_widget.dart';
 
 void main() {
   const app = MyApp();
-  const scope = ProviderScope(child: app); // Riverpodを使うためにProviderScopeでラップ
+  // Riverpodでデータを受け渡しが可能な状態にするために必要
+  const scope = ProviderScope(child: app);
   runApp(scope);
 }
 
