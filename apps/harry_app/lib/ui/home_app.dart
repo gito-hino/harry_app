@@ -1,48 +1,22 @@
 // ホーム画面
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
-class HomeApp extends StatelessWidget {
-  const HomeApp({super.key});
+import '../providers/hogwarts_family_provider.dart';
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Harry App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.amber),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Harry App'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class HomeApp extends ConsumerWidget {
+  const HomeApp(this.title, {super.key});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  final List<Map<String, String>> hogwartsFamily = [
-    {"name": "Harry Potter", "age": "11", "house": "Gryffindor"},
-    {"name": "Hermione Granger", "age": "11", "house": "Gryffindor"},
-    {"name": "Ron Weasley", "age": "11", "house": "Gryffindor"},
-    {"name": "Draco Malfoy", "age": "11", "house": "Slytherin"},
-    {"name": "Luna Lovegood", "age": "11", "house": "Ravenclaw"},
-    {"name": "Cedric Diggory", "age": "11", "house": "Hufflepuff"},
-  ];
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final hogwartsFamily = ref.watch(hogwartsFamilyProvider);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
+        title: Text(title),
       ),
       body: ListView.builder(
         itemCount: hogwartsFamily.length,
@@ -77,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
+                      // 名前
                       hogwartsFamily[index]["name"]!,
                       style: const TextStyle(
                         color: Colors.black,
@@ -85,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     const SizedBox(height: 8),
                     Text(
+                      // 年齢
                       "Age: ${hogwartsFamily[index]["age"]!}",
                       style: const TextStyle(
                         color: Colors.black,
@@ -93,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     const SizedBox(height: 8),
                     Text(
+                      // 所属寮
                       "House: ${hogwartsFamily[index]["house"]!}",
                       style: const TextStyle(
                         color: Colors.black,

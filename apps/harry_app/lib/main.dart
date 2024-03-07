@@ -3,29 +3,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'my_widget.dart';
+import 'ui/home_app.dart';
 
 void main() {
-  const app = MyApp();
-  const scope = ProviderScope(child: app); // Riverpodを使うためにProviderScopeでラップ
-  runApp(scope);
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: MyWidget(),
-          // child: MyWidget1(),
-          // child: MyWidget2(),
-          // child: MyWidget3(),
-          // child: MyWidget4(),
-        ),
+  runApp(
+    // Riverpodを使うためにProviderScopeでラップ
+    const ProviderScope(
+      child: MaterialApp(
+        home: HomeApp("ハリーポッター登場人物一覧"),
       ),
-    );
-  }
+    )
+  );
 }
