@@ -16,6 +16,7 @@ dependencies:
   flutter_hooks:
   riverpod_annotation:
   riverpod_generator:
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -29,4 +30,10 @@ flutter:
     assets:
       - assets/images/
 uses-material-design: true
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/harry_potter_icon.png"
 
