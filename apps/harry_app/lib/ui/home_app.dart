@@ -40,7 +40,8 @@ class HomeApp extends ConsumerWidget {
                         aspectRatio: 1.0,
                         child: SvgPicture.asset(
                             'assets/images/harry_potter_icon.svg',
-                            fit: BoxFit.cover
+                            fit: BoxFit.cover,
+                            color: Colors.black,
                         )
                     ),
                   ),
