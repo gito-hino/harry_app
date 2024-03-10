@@ -1,7 +1,6 @@
 // ホーム画面
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../providers/hogwarts_family_provider.dart';
 
