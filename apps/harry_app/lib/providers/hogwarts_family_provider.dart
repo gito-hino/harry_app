@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final hogwartsFamilyProvider = Provider<List<Map<String, String>>>((ref) {
+final hogwartsFamilyProvider = FutureProvider<List<Map<String, String>>>((ref) {
   return [
     {"name": "アルバス・ダンブルドア", "age": "110", "house": "グリフィンドール"},
     {"name": "アーガス・フィルチ", "age": "40", "house": "グリフィンドール"},
