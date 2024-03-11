@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../providers/hogwarts_family_provider.dart';
+import 'widgets/custom_app_bar.dart';
 
 class HomeApp extends ConsumerWidget {
   const HomeApp(this.title, {super.key});
@@ -13,14 +14,11 @@ class HomeApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // hogwartsFamilyProviderから非同期にデータを取得し、
-    // AsyncValueオブジェクトとしてhogwartsFamilyに格納（）
+    // AsyncValueオブジェクトとしてhogwartsFamilyに格納
     final AsyncValue<List<Map<String, String>>> hogwartsFamily
     = ref.watch(hogwartsFamilyProvider);
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.amberAccent[700],
-        title: Text(title),
-      ),
+      appBar: CustomAppBar(title: title),
       // AsyncValueを使用して、データ取得の状態に応じた異なるUIを表示
       body: hogwartsFamily.when(
         // データが取得できた場合
