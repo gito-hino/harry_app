@@ -8,12 +8,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../lib/ui/home_app.dart';
+import '../lib/ui/hp_home_app.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const HomeApp("ハリーポッター登場人物一覧"));
+    await tester.pumpWidget(const HpHomeApp("ハリーポッター登場人物一覧"));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

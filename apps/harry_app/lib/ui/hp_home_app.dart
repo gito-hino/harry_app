@@ -5,10 +5,10 @@ import 'components/custom_appbar_view.dart';
 import 'components/error_view.dart';
 import 'components/harrypotter_list_view.dart';
 
-// ホーム画面のウィジェット
-class HomeApp extends ConsumerWidget {
-  const HomeApp(this.title, {super.key});
-
+// ハリーポッターホーム画面のウィジェット
+class HpHomeApp extends ConsumerWidget {
+  const HpHomeApp(this.title, {super.key});
+  // タイトルを受け取る
   final String title;
 
   @override
