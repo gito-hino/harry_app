@@ -14,12 +14,12 @@ class HomeApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // hogwartsFamilyProviderから非同期にデータを取得し、
-    // AsyncValueオブジェクトとしてhogwartsFamilyに格納（）
+    // AsyncValueオブジェクトとしてhogwartsFamilyに格納
     final AsyncValue<List<Map<String, String>>> hogwartsFamily
     = ref.watch(hogwartsFamilyProvider);
     return Scaffold(
       appBar: CustomAppBar(title: title),
-    // AsyncValueを使用して、データ取得の状態に応じた異なるUIを表示
+      // AsyncValueを使用して、データ取得の状態に応じた異なるUIを表示
       body: hogwartsFamily.when(
         // データが取得できた場合
         data: (list) => HarryPotterListView(listData: list),
