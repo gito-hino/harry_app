@@ -9,7 +9,7 @@ void main() {
     const ProviderScope(
       child: MaterialApp(
         //デフォルトのホーム画面をHomeAppに設定
-        home: HomeApp(""),
+        home: HomeApp("ハリーポッター登場人物"),
       ),
     )
   );

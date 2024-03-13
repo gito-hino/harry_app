@@ -15,6 +15,7 @@ class HomeApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // hogwartsFamilyProviderから非同期にデータを取得し、
     // AsyncValueオブジェクトとしてhogwartsFamilyに格納
+    // TODO modelに変更：freezedを使う
     final AsyncValue<List<Map<String, String>>> hogwartsFamily
     = ref.watch(hogwartsFamilyProvider);
     return Scaffold(
